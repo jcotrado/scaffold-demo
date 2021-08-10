@@ -1,4 +1,4 @@
-from hello import toyou, add, subtract
+from hello import add, subtract, toyou
 
 def setup_function(function):
     print(f" Running Setup: {function.__name__}")
@@ -9,8 +9,10 @@ def teardown_function(function):
     del function.x
 
 ### Run to see failed test
-#def test_hello_add():
-#    assert add(test_hello_add.x) == 12
+def test_hello_add():
+    #assert add(test_hello_add.x) == 12
+     assert add(11) == 12
 
 def test_hello_subtract():
-    assert subtract(test_hello_subtract.x) == 9
+    #assert subtract(test_hello_subtract.x) == 9
+    assert subtract(8) == 9

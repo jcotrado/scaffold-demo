@@ -1,10 +1,14 @@
 install:
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+		pip install -r requeriments.txt
 
 install-azure:
 	pip install --upgrade pip &&\
 		pip install -r requeriments-azure.txt
+
+install-google:
+	pip install --upgrade pip &&\
+		pip install -r requeriments-gcp.txt
 
 format:
 	black *.py
@@ -14,5 +18,5 @@ lint:
 
 test:
 	python -m pytest -vv --cov=hello test_hello.py
-
+	
 all: install lint test
